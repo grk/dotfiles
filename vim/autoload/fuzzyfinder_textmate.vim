@@ -1,0 +1,1 @@
+../plugin/fuzzyfinder_textmate.vim
