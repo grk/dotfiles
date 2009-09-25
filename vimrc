@@ -47,7 +47,7 @@ set vb t_vb=
 " incremental search wins
 set incsearch
 
-:colorscheme desert
+:colorscheme customtwilight
 
 " so that tmp files dont create junk in project directories
 set backupdir=~/.vim/backup
