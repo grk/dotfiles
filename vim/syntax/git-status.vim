@@ -1,0 +1,1 @@
+../../vim-plugins/git-vim/syntax/git-status.vim
