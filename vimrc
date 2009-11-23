@@ -29,8 +29,12 @@ set smartindent
 set tabstop=2
 set shiftwidth=2
 
+:colorscheme vividchalk
+
+let mapleader = ","
+
 " hilight lines longer than 80 chars
-nnoremap <silent> ,l
+nnoremap <silent> <Leader>l
       \ :if exists('w:long_line_match') <Bar>
       \   silent! call matchdelete(w:long_line_match) <Bar>
       \   unlet w:long_line_match <Bar>
@@ -39,15 +43,9 @@ nnoremap <silent> ,l
       \ else <Bar>
       \   let w:long_line_match = matchadd('ErrorMsg', '\%>80v.\+', -1) <Bar>
       \ endif<CR>
- 
-
-" beeper
-set vb t_vb=
 
 " incremental search wins
 set incsearch
-
-:colorscheme customtwilight
 
 " so that tmp files dont create junk in project directories
 set backupdir=~/.vim/backup
@@ -75,7 +73,7 @@ imap aa @
 " invisible characters
 set listchars=trail:.,tab:>-,eol:$
 set nolist
-:noremap ,i :set list!<CR> " Toggle invisible chars
+:noremap <Leader>i :set list!<CR> " Toggle invisible chars
 
 
 " for Markdown
@@ -96,13 +94,16 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 " May require ruby compiled in
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete 
+autocmd FileType ruby,eruby compiler ruby
+
 
 " NERDtree keybinds
-:noremap ,n :NERDTreeToggle<CR>
+noremap <Leader>n :NERDTreeToggle<CR>
 let NERDTreeMouseMode=1
 
 " fuzzyfinder_textmate
-map ,f :FuzzyFinderTextMate<CR>
-map ,b :FuzzyFinderBuffer<CR>
+map <Leader>f :FuzzyFinderTextMate<CR>
+map <Leader>b :FuzzyFinderBuffer<CR>
+
 
 
