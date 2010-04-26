@@ -35,3 +35,5 @@ if [ -f $git_completion ]; then
   source $git_completion
 fi
 
+if [[ -s /Users/gk/.rvm/scripts/rvm ]] ; then source /Users/gk/.rvm/scripts/rvm ; fi
+

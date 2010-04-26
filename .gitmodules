@@ -25,3 +25,9 @@
 [submodule "vimbundles/vim-markdown"]
 	path = vimbundles/vim-markdown
 	url = git://github.com/tpope/vim-markdown.git
+[submodule "vimbundles/vim-cucumber"]
+	path = vimbundles/vim-cucumber
+	url = git://github.com/tpope/vim-cucumber.git
+[submodule "vimbundles/snipmate.vim"]
+	path = vimbundles/snipmate.vim
+	url = git://github.com/msanders/snipmate.vim.git
